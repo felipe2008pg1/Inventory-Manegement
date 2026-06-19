@@ -1,21 +1,17 @@
-# Gerenciamento de inventário
+# 🚛 Inventory Manegement
 
-Sistema de Gerenciamento de Inventário (Python)
-Sistema de mercado focado em lógica de Back-end, priorizando a eficiência das engrenagens internas do software.
+Inventory Management System (Python)
+Market system focused on back-end logic, prioritizing the efficiency of the software's internal components.
 
-Funcionalidades
-• Gerenciamento de estoque: Controle em tempo real.
+Features
+• Inventory Management: Real-time control.
+• Data Structuring: Use of dictionaries for optimized searching.
+• Purchase/Sale Flow: Logic based on conditionals and repetition.
+• Robustness: Input handling to avoid runtime errors.
 
-• Estruturação de dados: Uso de dicionários para busca otimizada.
+How to execute:
 
-• Fluxo de Compra/Venda: Lógica baseada em condicionais e repetição.
-
-• Robustez: Tratamento de inputs para evitar erros de execução.
-
-Como Executar
-1. Certifique-se de ter o Python instalado.
-
-2. Clone o repositório: `git clone (https://github.com/felipe2008pg1/Gerenciamento-de-Inventario)`
-
-3. Execute o script: `python main.py`
+1. Make sure you have Python installed.
+2. Clone the repository: `git clone (https://github.com/felipe2008pg1/Gerenciamento-de-Inventario)`
+3. Run the script: `python main.py`
 
