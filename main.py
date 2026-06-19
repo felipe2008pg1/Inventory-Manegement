@@ -1,49 +1,49 @@
-listap = []
+product_list = []
 
 while True:
     try:
-        menu = int(input("\n1-Add | 2-Listar | 3-Remover | 4-Sair: "))
+        menu = int(input("\n1-Add | 2-List | 3-Remove | 4-Exit: "))
     except ValueError:
-        print("Erro: Digite apenas o NÚMERO das opções.")
+        print("Error: Enter only the NUMBER of the options.")
         continue
 
     if menu == 1:
         try:
-            nome = input("Nome: ").strip()
-            qtd = int(input("Qtd: "))
-            preco = float(input("Preço: "))
-            
-            if qtd <= 0 or preco <= 0:
-                print("❌ ERRO: Valores inválidos (devem ser > 0).")
+            name = input("Name: ").strip()
+            quantity = int(input("Quantity: "))
+            price = float(input("Price: "))
+
+            if quantity <= 0 or price <= 0:
+                print("❌ ERROR: Invalid values (must be > 0).")
             else:
-                item = {"nome": nome, "quantidade": qtd, "preco": preco}
-                listap.append(item)
-                print(f"✅ {nome} adicionado!")
+                item = {"name": name, "quantity": quantity, "price": price}
+                product_list.append(item)
+                print(f"✅ {name} added!")
         except ValueError:
-            print("❌ ERRO: Quantidade e Preço devem ser números!")
+            print("❌ ERROR: Quantity and Price must be numbers!")
 
     elif menu == 2:
-        if not listap:
-            print("Lista vazia.")
+        if not product_list:
+            print("List is empty.")
         else:
-            for i, p in enumerate(listap):
-                print(f"[{i}] {p['nome']} - Qtd: {p['quantidade']} - R$ {p['preco']:.2f}")
+            for i, p in enumerate(product_list):
+                print(f"[{i}] {p['name']} - Qty: {p['quantity']} - $ {p['price']:.2f}")
 
     elif menu == 3:
-        if not listap:
-            print("Nada para remover.")
+        if not product_list:
+            print("Nothing to remove.")
             continue
-        
+
         try:
-            for i, p in enumerate(listap):
-                print(f"{i}: {p['nome']}")
-            
-            escolha = int(input("Índice para remover: "))
-            removido = listap.pop(escolha)
-            print(f"🗑️ {removido['nome']} removido!")
+            for i, p in enumerate(product_list):
+                print(f"{i}: {p['name']}")
+
+            choice = int(input("Index to remove: "))
+            removed = product_list.pop(choice)
+            print(f"🗑️ {removed['name']} removed!")
         except (ValueError, IndexError):
-            print("❌ ERRO: Escolha um índice válido (número da lista).")
+            print("❌ ERROR: Choose a valid index (list number).")
 
     elif menu == 4:
-        print("Saindo...")
+        print("Exiting...")
         break
